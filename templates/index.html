@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fake Shop</title>
+        <h1> Welcomne to Fake Shop!</h1>
+        <h2> Shop sustainably!</h2>
+        <meta charset="utf-8">
+        <style>
+            table {
+              font-family: arial, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+            }
+            
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+            
+            tr:nth-child(even) {
+              background-color: #dddddd;
+            }
+            </style>
+    </head>
+    
+    <body>
+        <p> You have ${{earnings}} dollars left to spend </p>
+        <table>
+            <tr>
+              <th>Item</th>
+              <th>Cost</th>
+              <th>Available </th>
+              <th>Visual</th>
+              <th> Transaction</th>
+            </tr>
+    
+            {% for product in inventory %}
+                <tr>
+                    <td> {{product["name"]}}</td>
+                    <td> {{product["cost"]}}</td>
+                    <td> {{product["stock"]}}</td>
+                    <td><img src='{{product["url"]}}' width="300" height="300"/> </td>
+                    <td> <a href='/buy/{{product["id"]}}'> Buy </button> </td>
+                </tr>
+            {% endfor %}
+          </table>
+    </body>
+</html>
