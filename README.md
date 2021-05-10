@@ -29,7 +29,7 @@ https://www.google.ca/chrome/
 ## Running the project
 "
 In your local machine, go to your project directory and run the following command:
-* flask run <br />
+* flask run   (make sure app.py is present in the current directory) <br />
 
 Once the flask server has started, use the localhost link mentioned in the terminal to access the user Interface for this project. The link should look like - http://127.0.0.1:5000/ <br />
 
